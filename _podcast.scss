@@ -1,0 +1,161 @@
+@import './Variables';
+
+#podcast{
+
+/* condiciones de bacground  */
+    width: 100%;
+    height: 850px;
+    background:$fondos;
+    transform-origin: top right;
+    transform: skewY(-4deg);   /* hace el efecto diagonal  */
+
+    @media (max-width:1000px ) {
+        height: 1300px;
+    }
+
+
+    
+   
+    .diagonal{
+         display: flex;
+         flex-flow: row wrap;   
+         transform: skewY(4deg);  /* nivela los elementos  */
+         width: 100%;
+
+         /* titulo episodios  */
+         .titulo{
+            width: 100%; 
+            height: 30px;
+            padding-bottom: 50px;   
+
+            @media (max-width: 700px ) {
+            width: 100%;   
+            padding-bottom: 50px;
+             
+           }
+
+           h2{
+              padding: 20px;
+              font-family: $font_titulo;
+              font-size: 36px;
+              color: $titulo;
+              letter-spacing: 0;
+              line-height: 42px;
+            }
+           
+        }
+       
+    } 
+}
+
+ /* Manejo de Iframs  */
+.cuadros{
+    width: 100%;
+    display:flex ;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-top: 50px;  
+
+     /* contenedor  */
+    .link{ 
+        padding: 10px;
+        height: 250px;
+
+     /* Medida de cada link  */
+        iframe{
+            
+            height: 232px;
+            width: 580px;
+            border: none;
+
+            
+        @media (max-width: 700px ) {
+            width: 100%;
+          } 
+
+          &:hover{
+            transform: scale(1,1.1);
+            cursor: pointer;
+          }
+
+
+          }
+    
+    }
+       
+    
+}     
+
+ /* parrafo y titulo de seccion (de donde venimos)  */ 
+
+    .imagen{
+        width: 100%;
+        display: flex;
+        flex-direction: row ;
+       justify-content: center;
+      
+
+        @media (max-width: 700px ) {
+          
+          display:flex ;
+          flex-flow: row wrap;
+
+        } 
+        
+    
+    }
+
+   
+    #texto{
+        margin-top: 100px;
+        padding: 15px;
+        display: block;
+
+        h2{
+                font-family: $font_titulo;
+                font-size: 36px;
+                color: $letras;
+                letter-spacing: 0;
+                line-height: 42px;
+        }
+
+        p{
+            font-family: $font_texto;
+            font-size: 14px;
+            color: $letras;
+            letter-spacing: 0;
+             padding: 15px;
+             line-height: 24px;
+             text-align: justify;
+             
+        }
+        
+        
+    }
+
+    /* figura con traslapado */
+    .figura{
+
+    
+        padding-left: 10%;
+        margin-top: -60px;
+        z-index: 2;
+        img{
+        height: 660px;
+        width: 458px;
+        
+        }
+
+    }
+
+
+    
+
+
+
+
+
+
+  
+   
+   

@@ -1,0 +1,166 @@
+@import './Variables';
+
+/* Invitados  */
+.titulo{
+   padding-top: 50px;
+    width: 100%;
+    
+ h2{
+       
+       font-family:$font_titulo;
+       font-size: 36px;
+       color:$letras;
+       letter-spacing: 0;
+        line-height: 24px;
+        padding-left: 10%;
+     }
+    
+}
+
+/* seccion de imagenes  */
+#personas{
+    padding-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    
+
+
+
+  img{
+      
+      width: 380px;
+      height: 350px;
+
+          
+      @media (max-width: $vm ) {
+        width: 100%;
+
+      } 
+
+      &:hover{
+        transform: scale(1,1.1);
+        cursor: pointer;
+      }
+
+
+  }
+
+    
+
+}
+
+
+#temas{
+    padding-top:60px ;
+    width: 100%;
+    padding-bottom: 100px;
+
+    h2{
+        margin: auto;
+        font-family: $font_titulo;
+        font-size: 48px;
+        color: $letras;
+        letter-spacing: 0;
+        padding-left: 10%;
+        
+    }
+
+    .celda{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 10%;
+        padding-right: 10%;
+
+        img{
+            padding: 30px;
+            height: 204px;
+            width: 204px;
+
+        }
+
+        h3{
+            text-align: center;
+            font-family: $titulo;
+            font-size: 24px;
+            color: $letras;
+            letter-spacing: 0;
+            
+        }
+
+        @media (max-width: 700px ) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+    }
+
+
+}
+
+
+.novedades {
+
+    width: 100%;
+    height: 400px;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    background:blue;
+
+    @media (max-width: 700px ) {
+        height: 600px;  
+    }
+
+
+    h2{
+
+       padding-top: 150px;
+        font-family: IBMPlexSans;
+       font-size: 48px;
+      color: #FFFFFF;
+     letter-spacing: 0;
+     text-align: center;
+     padding-bottom: 40px;
+    }
+
+
+    .enlace{
+        margin: auto;
+        width: 288px;
+        height: 48px;
+        background: $botones;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        &:hover {
+            cursor: pointer;
+            background-image:  linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);;
+            }
+    
+        a{
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            font-family: IBMPlexMono-Medium;
+            font-size: 18px;
+            color: black;;
+            letter-spacing: 0;
+            line-height: 22px;
+            text-decoration: none;
+          
+            
+        
+    }
+     
+      }     
+    
+}
+
+
+
+
+
+
+

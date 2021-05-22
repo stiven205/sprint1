@@ -1,0 +1,112 @@
+@import './Variables';
+@import './section1';
+@import './podcast';
+@import './invitados';
+@import './footer';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+/* condiciones del header  */
+header{   
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $vm) {
+        display: flex;
+        justify-content: row;
+    }
+
+}
+
+/* posicionamiento  del logo  */
+.logo{
+    @media only screen and (max-width: $vm) {
+        width: 2%;
+    }
+    
+img{
+    padding-top: 26px;
+    padding-left: 20px;
+}
+}
+
+.nav{
+    
+    @media only screen and (max-width: $vm) {
+        width: 98%;
+    }
+}
+
+/* menu hamburguesa  */
+.menu {
+    margin: 0px 30px 0 0;
+    padding-top: 26px;
+    
+a {
+    text-decoration: none;
+    color: $letras;
+    font-family: $font_texto;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 28px;
+    margin: 0 10px;
+  
+}
+}
+
+label {
+    padding-top: 26px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+#toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: $vm) {
+    label {
+        display: block;
+        cursor: pointer;
+        background-color: white;
+        
+    }
+
+    .menu {
+        width: 100%;
+        display: none;
+        background: blue;
+        margin-top: 60px;
+        
+         a {
+             display: block;
+             padding: 3px;
+             margin: 0;
+             color: white;
+        }
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+        
+    }
+    
+    
+}

@@ -1,0 +1,104 @@
+
+@import './Variables';
+
+/* condiciones de la primera seccion  */
+.section_1{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding-top: 30px;
+    margin-top: 30px; 
+
+    @media (max-width: $vm ) {
+        padding-top: 50px; 
+        margin-top: 40px; 
+         
+   }  
+}
+
+/* Diseño del titulo y texto  */
+.titulo{
+    width: 100%;
+   
+
+    h1{
+        font-weight: 800;
+        width: 100%;
+        font-family: $font_titulo;
+        font-size: 36px;
+        color:$letras;
+        letter-spacing: 0;
+         line-height: 42px; 
+         padding-left:10% ;
+
+         @media (min-width: $vm ) {
+            font-size: 64px;
+             
+       } 
+
+         .tachar{
+             text-decoration: line-through;
+        }
+
+        .punto{
+            color: $fondos;
+        }
+         
+    }
+
+    p{
+        width: 300px;
+        height: 48px;
+        font-family: $font_texto;
+       font-size: 14px;
+       color: $letras;
+        letter-spacing: 0;
+        line-height: 22px;
+        text-align: justify;
+        padding-top: 30px;
+        padding-left:10% ;
+       
+
+        @media (min-width: $vm ) {
+            font-size: 16px;
+            width: 628px;
+        }
+    }
+}
+
+/* Diseño de boton  */
+
+.margen{
+
+    padding-left:10% ;
+    padding-top: 100px;
+
+    .conoce{
+    width: 226px;
+    height: 56px;
+    background: $botones;
+    display: flex;
+    justify-content: space-around;
+
+    a{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        font-family: $font_texto;
+        font-size: 16px;
+        color: $letras;
+        letter-spacing: 0;
+        line-height: 22px;
+        text-decoration: none;
+    
+     }
+
+     &:hover {
+        cursor: pointer;
+        background-image:  linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);;
+        }
+ 
+  }    
+    
+}
+
